@@ -27,9 +27,6 @@ function slides(n) {
 let prev = document.querySelector('.offer__slider-prev')
 let next = document.querySelector('.offer__slider-next')
 let sliders = document.querySelectorAll('.offer__slide')
-let current = document.querySelector('#current')
-let total = document.querySelector('#total')
-
 
 let slideIndex = 0
 showSlides(slideIndex)
@@ -47,12 +44,6 @@ function showSlides(n) {
 
     sliders[slideIndex].classList.remove('hide')
     sliders[slideIndex].classList.add('show')
-
-    current.innerHTML = '0' + (slideIndex)
-
-    if (current.innerHTML = '0' + (slideIndex)) {
-        total.innerHTML = '0' + (slideIndex + 1)
-    }
 }
 
 prev.onclick = () => {
@@ -63,27 +54,6 @@ next.onclick = () => {
     slideIndex++
     showSlides(slideIndex)
 }
-
-let gender_btns = document.querySelectorAll('.calculating__choose-item')
-let choose = document.querySelectorAll('.calculating__choose-item3')
-
-
-gender_btns.forEach(btn => {
-    btn.onclick = () => {
-        gender_btns.forEach(item => item.classList.remove('calculating__choose-item_active'))
-
-        btn.classList.add('calculating__choose-item_active')
-    }
-})
-
-choose.forEach(el => {
-    el.onclick = () => {
-        choose.forEach(x => x.classList.remove('calculating__choose-item_active'))
-
-        el.classList.add('calculating__choose-item_active')
-    }
-
-})
 
 let modal = document.querySelector('.modal')
 let open_btns = document.querySelectorAll('button[data-modal]')
@@ -104,28 +74,56 @@ setTimeout(() => {
     modal.style.display = 'block'
 }, 2000);
 
-// function openClose(arr, func) {
-//     open_btns.forEach(btn => {
-//         arr.onclick = () => {
-//             func()
-//         }
-//     })
-// }
 
-// openClose(open_btns, openModal)
-// openClose(close_btn, closeModal)
+window.onscroll = function (ev) {
+    if (Math.ceil(window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+        // you're at the bottom of the page
+        modal
+    }
+};
 
-// function openModal() {
-//     modal.style.display = 'block'
-// }
+// calculator
+let user_info = { gender: 'woman' }
 
-// function closeModal() {
-//     modal.style.display = 'none'
-// }
+let genBtns = document.querySelectorAll('#gender .calculating__choose-item')
+let calcInputs = document.querySelectorAll('.calculating__choose_medium input')
+let activeBtns = document.querySelectorAll('.calculating__choose_big .calculating__choose-item')
+let resultOutput = document.querySelector('#result')
 
 
+genBtns.forEach(btn => {
+    btn.onclick = () => {
+        genBtns.forEach(el => el.classList.remove('calculating__choose-item_active'))
+
+        btn.classList.add('calculating__choose-item_active')
+
+        user_info.gender = btn.getAttribute('data-g')
+    }
+});
 
 
+calcInputs.forEach(input => {
+    input.onkeyup = () => {
+        user_info[input.id] = +input.value
+    }
+})
 
 
+activeBtns.forEach(btn => {
+    btn.onclick = () => {
+        activeBtns.forEach(el => el.classList.remove('calculating__choose-item_active'))
+        btn.classList.add('calculating__choose-item_active')
+        let activeNum = +btn.getAttribute('data-act')
 
+        let { age, weight, height, gender } = user_info
+
+        let result = (10 * weight) + (6.25 * height) - (5 * age)
+
+        if (gender === 'man') {
+            resultOutput.innerHTML = Math.round((result + 5) * activeNum)
+        } else {
+            resultOutput.innerHTML = Math.round((result - 161) * activeNum)
+        }
+
+    }
+})

@@ -139,8 +139,8 @@
                         Ваш пол
                     </div>
                     <div class="calculating__choose" id="gender">
-                        <div class="calculating__choose-item calculating__choose-item_active">Женщина</div>
-                        <div class="calculating__choose-item">Мужчина</div>
+                        <div data-g="woman" class="calculating__choose-item calculating__choose-item_active">Женщина</div>
+                        <div data-g="man" class="calculating__choose-item">Мужчина</div>
                     </div>
                     <div class="calculating__subtitle">
                         Ваша конституция
@@ -150,29 +150,29 @@
                             type="text"
                             id="height"
                             placeholder="Введите рост"
-                            class="calculating__choose-item2"
+                            class="calculating__choose-item"
                         >
                         <input
                             type="text"
                             id="weight"
                             placeholder="Введите вес"
-                            class="calculating__choose-item2"
+                            class="calculating__choose-item"
                         >
                         <input
                             type="text"
                             id="age"
                             placeholder="Введите возраст"
-                            class="calculating__choose-item2"
+                            class="calculating__choose-item"
                         >
                     </div>
                     <div class="calculating__subtitle">
                         Выберите вашу физическая активность
                     </div>
                     <div class="calculating__choose calculating__choose_big">
-                        <div id="low" class="calculating__choose-item3">Низкая активность</div>
-                        <div id="small" class="calculating__choose-item3 calculating__choose-item_active">Невысокая активность</div>
-                        <div id="medium" class="calculating__choose-item3">Умеренная активность</div>
-                        <div id="high" class="calculating__choose-item3">Высокая активность</div>
+                        <div data-act="1.2" class="calculating__choose-item">Низкая активность</div>
+                        <div data-act="1.375" class="calculating__choose-item calculating__choose-item_active">Невысокая активность</div>
+                        <div data-act="1.55" class="calculating__choose-item">Умеренная активность</div>
+                        <div data-act="1.7" class="calculating__choose-item">Высокая активность</div>
                     </div>
                     <div class="calculating__divider"></div>
                     <div class="calculating__total">
@@ -180,7 +180,7 @@
                             Ваша суточная норма калорий:
                         </div>
                         <div class="calculating__result">
-                            <span>2700</span>
+                            <span id="result">2700</span>
                             ккал
                         </div>
                     </div>
@@ -200,8 +200,7 @@
                         <div class="menu__item-price">
                             <div class="menu__item-cost">Цена:</div>
                             <div class="menu__item-total">
-                                <span>229</span>
-                                грн/день
+                                <span>229</span> грн/день
                             </div>
                         </div>
                     </div>
@@ -213,8 +212,7 @@
                         <div class="menu__item-price">
                             <div class="menu__item-cost">Цена:</div>
                             <div class="menu__item-total">
-                                <span>550</span>
-                                грн/день
+                                <span>550</span> грн/день
                             </div>
                         </div>
                     </div>
@@ -226,8 +224,7 @@
                         <div class="menu__item-price">
                             <div class="menu__item-cost">Цена:</div>
                             <div class="menu__item-total">
-                                <span>430</span>
-                                грн/день
+                                <span>430</span> грн/день
                             </div>
                         </div>
                     </div>

@@ -51,12 +51,6 @@ a {
     margin: 0 auto
 }
 
-@media screen and (max-width:480px) {
-    .container {
-        max-width: 480px;
-    }
-}
-
 .divider {
     width: 330px;
     height: 1px;
@@ -82,8 +76,6 @@ a {
     justify-content: space-between;
     min-width: 550px
 }
-
-
 
 .header__logo {
     max-width: 170px
@@ -122,24 +114,6 @@ a {
     margin-right: 0
 }
 
-@media screen and (max-width: 480px) {
-    .header__logo {
-        max-width: 70px;
-    }
-
-    .header__link {
-        font-size: 15px;
-    } 
-
-    .header__links {
-        transform: translateX(-50px);
-    }
-
-    .header__right-block {
-        max-width: 100px;
-    }
-}
-
 .sidepanel {
     position: fixed;
     left: 60px;
@@ -150,12 +124,6 @@ a {
     flex-direction: column;
     justify-content: space-between;
     align-items: center
-}
-
-@media screen and (max-width:480px) {
-    .sidepanel {
-        display: none;
-    }
 }
 
 .sidepanel__text {
@@ -271,23 +239,6 @@ a {
     font-weight: 700
 }
 
-@media screen and (max-width:480px) {
-    .tabcontent {
-        max-width: 500px;
-
-    }
-
-    .tabheader {
-        width: 200px;
-    }
-    .tabcontent__descr {
-        font-size: 14px;
-        max-width: 350px;
-        right: -200px;
-        top: 250px;
-    }
-}
-
 .offer {
     padding: 70px 0 100px 0;
     position: relative
@@ -395,47 +346,6 @@ a {
     object-fit: cover
 }
 
-@media screen and (max-width:480px) {
-    .offer {
-        margin-top: 200px;
-    }
-
-    .title {
-        max-width: 300px;
-        font-size: 18px;
-        transform: translateX(300px);
-
-    }
-
-    .offer__descr {
-        width: 300px;
-        transform: translateX(300px);
-    }
-
-    .offer__action {
-        transform: translateY(250px);
-        margin-left: 40px;
-    }
-
-    .offer__text {
-        text-align: center;
-    }
-
-    
-    .offer__slider {
-        max-width: 500px;
-    }
-    
-    .offer__advantages, .offer__slider {
-        margin-top: 300px;
-        transform: translateX(250px);
-    }
-    .offer__advantages {
-        width: 900px;
-        margin-right: 100px;
-    }
-}
-
 .calculating {
     padding: 50px 0
 }
@@ -480,7 +390,7 @@ a {
     justify-content: center
 }
 
-.calculating__choose-item,.calculating__choose-item2,.calculating__choose-item3 {
+.calculating__choose-item {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -540,33 +450,6 @@ a {
 
 .calculating__result span {
     font-size: 42px
-}
-
-@media screen and (max-width:480px) {
-    .title {
-        margin-left: 80px;
-    }
-
-    .calculating__choose {
-        flex-direction: column;
-    }
-
-    .calculating__field {
-        margin-left: 300px;
-    }
-
-    .calculating__choose-item2 {
-        margin-top: 30px;
-    }
-
-    .calculating__choose-item3 {
-        margin-top: 30px;
-
-    }
-
-    .calculating__result span {
-        font-size: 24px;
-    }
 }
 
 .menu {
@@ -634,16 +517,6 @@ a {
 .menu__item-price span {
     font-size: 24px;
     font-weight: 700
-}
-
-@media screen and (max-width:480px) {
-    .menu__item {
-        margin-left: 140px;
-    }
-
-    .menu__item-subtitle,.menu__item-descr,.menu__item-total {
-        font-size: 18px;
-    }
 }
 
 .order {
@@ -805,7 +678,6 @@ a {
 }
 
 .modal__close {
-    display: block;
     position: absolute;
     top: 8px;
     right: 14px;
@@ -815,7 +687,7 @@ a {
     font-weight: 700;
     border: none;
     background-color: transparent;
-    cursor: pointer;
+    cursor: pointer
 }
 
 .modal__title {
