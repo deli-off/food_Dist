@@ -146,8 +146,7 @@ function aninterval() {
                 minute.innerHTML = 59
                 hours.innerHTML--
                 if (hours.innerHTML <= 0) {
-                    hours.innerHTML - 1
-                    days.innerHTML--
+                    days.innerHTML - 1
                     if (days.innerHTML <= 0) {
                         clearInterval(interval)
                         hours.innerHTML = 0
@@ -157,7 +156,7 @@ function aninterval() {
                 }
             }
         }
-    }, 1)
+    }, 1000)
 }
 
 aninterval()
