@@ -148,10 +148,16 @@ function aninterval() {
                 if (hours.innerHTML <= 0) {
                     hours.innerHTML - 1
                     days.innerHTML--
+                    if (days.innerHTML <= 0) {
+                        clearInterval(interval)
+                        hours.innerHTML = 0
+                        minute.innerHTML = 0
+                        second.innerHTML = 0
+                    }
                 }
             }
         }
-    }, 1000)
+    }, 1)
 }
 
 aninterval()
