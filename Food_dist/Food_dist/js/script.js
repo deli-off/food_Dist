@@ -127,3 +127,48 @@ activeBtns.forEach(btn => {
 
     }
 })
+
+// timer
+
+let second = document.querySelector('#seconds')
+let minute = document.querySelector('#minutes')
+let hours = document.querySelector('#hours')
+let days = document.querySelector('#days')
+let interval;
+
+function aninterval() {
+    interval = setInterval(() => {
+        second.innerHTML--
+        if (second.innerHTML <= 0) {
+            second.innerHTML = 59
+            minute.innerHTML--
+            if (minute.innerHTML <= 0) {
+                minute.innerHTML = 59
+                hours.innerHTML--
+                if (hours.innerHTML <= 0) {
+                    hours.innerHTML - 1
+                    days.innerHTML--
+                }
+            }
+        }
+    }, 1000)
+}
+
+aninterval()
+// function antiinterval() {
+//     intrvl = setInterval(() => {
+//         mlsecond.innerHTML--
+//         if (mlsecond.innerHTML <= 0) {
+//             mlsecond.innerHTML = 99
+//             second.innerHTML--
+//             if (second.innerHTML <= 0) {
+//                 second.innerHTML = 59
+//                 if (minute.innerHTML <= 0) {
+//                     clearInterval(intrvl)
+//                     second.innerHTML = 0
+//                     mlsecond.innerHTML = 0
+//                 }
+//             }
+//         }
+//     }, 10);
+// }
