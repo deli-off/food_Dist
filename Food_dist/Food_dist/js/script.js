@@ -78,7 +78,8 @@ setTimeout(() => {
 window.onscroll = function (ev) {
     if (Math.ceil(window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
         // you're at the bottom of the page
-        modal
+        modal.style.display = 'block'
+
     }
 };
 
@@ -159,3 +160,4 @@ function aninterval() {
     }, 1000)
 }
 
+aninterval()
