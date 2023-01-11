@@ -159,21 +159,3 @@ function aninterval() {
     }, 1000)
 }
 
-aninterval()
-// function antiinterval() {
-//     intrvl = setInterval(() => {
-//         mlsecond.innerHTML--
-//         if (mlsecond.innerHTML <= 0) {
-//             mlsecond.innerHTML = 99
-//             second.innerHTML--
-//             if (second.innerHTML <= 0) {
-//                 second.innerHTML = 59
-//                 if (minute.innerHTML <= 0) {
-//                     clearInterval(intrvl)
-//                     second.innerHTML = 0
-//                     mlsecond.innerHTML = 0
-//                 }
-//             }
-//         }
-//     }, 10);
-// }
